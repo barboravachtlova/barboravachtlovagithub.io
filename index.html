@@ -25,7 +25,7 @@
             top: -10%;
             font-size: 30px;
             animation: fall linear infinite;
-            cursor: pointer; /* aby bylo jasné, že se dá kliknout */
+            cursor: pointer;
         }
 
         @keyframes fall {
@@ -54,6 +54,25 @@
         p {
             font-size: 20px;
             color: #d87093;
+        }
+
+        /* TLAČÍTKO */
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            color: white;
+            font-size: 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(255,105,180,0.4);
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(255,105,180,0.6);
         }
 
         .message {
@@ -90,19 +109,21 @@
     <div class="item heart" style="left:75%; animation-duration: 11s;">💗</div>
     <div class="item heart" style="left:90%; animation-duration: 13s;">💖</div>
 
-    <!-- Normální kafe (neklikací) -->
+    <!-- Kafe -->
     <div class="item" style="left:10%; animation-duration: 8s;">☕</div>
     <div class="item" style="left:30%; animation-duration: 15s;">☕</div>
     <div class="item" style="left:50%; animation-duration: 9s;">☕</div>
     <div class="item" style="left:70%; animation-duration: 12s;">☕</div>
     <div class="item" style="left:85%; animation-duration: 10s;">☕</div>
 
+    <!-- HLAVNÍ BOX -->
     <div class="box">
         <h1>Barbora Vachtlová</h1>
         <p>Ahoj jsem Bára a mám ráda Aničku a Niki. 💕</p>
-    </div>
 
-    <a href="anickaaniki.html">Klikni sem</a>
+        <!-- TLAČÍTKO -->
+        <a href="anickaaniki.html" class="button">💖 Klikni sem 💖</a>
+    </div>
 
     <!-- Zpráva -->
     <div id="message" class="message">Dneska ti to sluší! 🌸</div>
@@ -116,7 +137,7 @@
                 message.style.display = 'block';
                 setTimeout(() => {
                     message.style.display = 'none';
-                }, 2000); // zpráva zmizí po 2 sekundách
+                }, 2000);
             });
         });
     </script>
